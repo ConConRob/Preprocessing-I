@@ -76,43 +76,49 @@ html, body {
 	flex-direction: @direction;
 	justify-content: @just-content;
 }
-
+.text(@size, @align){
+	font-size: @size;
+	text-align: @align;
+}
 //less
 html{
 	font-size: @font-percentage;
 	color: @text-color;
 }
+p{color: @text-color;}
 h1{
-	font-size: 5rem;
-	text-align: center;
+	.text(5rem, center)
 }
 h2{
-	font-size: 3rem;
-	text-align: center;
+	.text(3rem, center)
 }
 h3, h4, h5, h6 {
-	font-size: 1.8rem;
+	.text(1.8rem, left)
 }
 p{
-	font-size: 1.6rem;
+	.text(1.6rem, left);
 }
 button{
 	background-color: @secondary-light;
 	border: 4px solid @secondary-dark;
-	padding: 10px 30px; 
+	padding: @padding-medium @padding-large; 
+	cursor: pointer;
 }
 
 .container {
 	max-width: 880px;
 	margin: 0 auto;
 	background-color: @secondary-light;
-
+	
 	header {
 		padding: @padding-medium @padding-large;
 		.flex(row, flex-end);
 		nav{
 			.flex(row, space-around);
 			width: 40%;
+			@media (max-width:640px){
+				width: 100%;
+			}
 		}
 		a{
 			font-size: 1.6em;
@@ -129,9 +135,12 @@ button{
 		.flex(row, space-between);
 		background-color: @primary-dark ; 
 		clip-path:polygon(0 0, 100% 0, 100% 100%, 0 80%);
-		height: 80vh;
-		min-height: 550px;
-		padding: @padding-large;
+		height: 600px;
+		padding: 15% @padding-large @padding-large @padding-large;
+		@media (max-width:640px){
+			height: 475px;
+			clip-path:polygon(0 0, 100% 0, 100% 100%, 0 90%);
+		}
 		h1{
 			padding-bottom: @padding-medium;
 		}
@@ -140,11 +149,8 @@ button{
 		}
 		img{
 			width: 80%;
-			padding-bottom: @padding-large;
+			margin-bottom: @padding-large;
 			border-radius: 10px;
-		}
-		button {
-			background-color:;
 		}
 	}
 
@@ -155,13 +161,18 @@ button{
 		h3{
 			padding-bottom: @padding-medium;
 			text-decoration: underline;
+			color: darken(@secondary-dark,30%);
+			@media (max-width:640px){
+				padding-top: @padding-medium;
+				align-self: center;
+			}
 		}
 		table {
 			border-spacing: 10px;
 			border: 2px solid @secondary-dark;
+			font-size: 1.6rem;
 			tr{
 				border-bottom: 2px solid @secondary-dark;
-				
 			}
 			th {
 				border-bottom: 3px solid @secondary-dark;
@@ -175,7 +186,10 @@ button{
 		}
 	}
 	footer{
-		text-align: center;
+		padding-bottom: @padding-medium;
+		p {
+			text-align: center;
+		}
 	}
 }
 
@@ -187,6 +201,10 @@ button{
 .flex-row {
 	display: flex;
 	width: 100%;
+	padding-bottom: @padding-large;
+	@media (max-width:640px){
+		flex-wrap: wrap;
+	}
 }
 .flex-col {
 	.flex(column, center);
@@ -194,9 +212,18 @@ button{
 }
 .column-1-2 {
 	width: 50%;
-	.flex(column, center);
+	.flex(column, flex-start);
 	align-items: center;
+	@media (max-width:640px){
+		width: 100%;
+	}
 }
 .left-of-col{
 	align-self: flex-start; 
+}
+.width-70p{
+	width: 70%;
+	@media (max-width:640px){
+		width: 100%;
+	}
 }
