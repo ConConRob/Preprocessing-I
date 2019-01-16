@@ -180,6 +180,15 @@ button {
   padding: 15px 30px;
   cursor: pointer;
 }
+a {
+  font-size: 1.6em;
+  color: #88bbd6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #99d3df;
+}
 .container {
   max-width: 880px;
   min-height: 100vh;
@@ -202,15 +211,6 @@ button {
   .container header nav {
     width: 100%;
   }
-}
-.container header a {
-  font-size: 1.6em;
-  color: #88bbd6;
-  text-decoration: none;
-}
-.container header a:hover {
-  text-decoration: underline;
-  color: #99d3df;
 }
 .container .jumbo {
   display: flex;
@@ -293,6 +293,27 @@ button {
 }
 .container footer p {
   text-align: center;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card {
+  margin-top: 30px;
+  padding: 15px;
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #99d3df;
+}
+.card img {
+  height: 50%;
 }
 .flex-row {
   display: flex;

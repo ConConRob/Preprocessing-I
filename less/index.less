@@ -113,6 +113,15 @@ button{
 	padding: @padding-medium @padding-large; 
 	cursor: pointer;
 }
+a{
+	font-size: 1.6em;
+	color:@secondary-dark;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+		color: @primary-dark;
+	}
+}
 
 .container {
 	max-width: 880px;
@@ -128,15 +137,6 @@ button{
 			width: 40%;
 			@media (max-width:800px){
 				width: 100%;
-			}
-		}
-		a{
-			font-size: 1.6em;
-			color:@secondary-dark;
-			text-decoration: none;
-			&:hover{
-				text-decoration: underline;
-				color: @primary-dark;
 			}
 		}
 	}
@@ -212,8 +212,25 @@ button{
 		}
 	}
 }
+//PORTFOLIO
+.card-container {
+	.flex(row, space-around);
+	flex-wrap: wrap;
+	width: 100%;
+}
 
-
+.card {
+	margin-top: @padding-large;
+	padding:@padding-medium;
+	width: 40%;
+	height: 40vh;
+	.flex(column,space-between);
+	align-items: center;
+	border: 2px solid @primary-dark;
+	img{
+		height:50%;
+	}
+}
 
 
 
