@@ -134,6 +134,10 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-size: 67.5%;
+  color: #635c5c;
+}
 h1 {
   font-size: 5rem;
   text-align: center;
@@ -142,68 +146,106 @@ h2 {
   font-size: 3rem;
   text-align: center;
 }
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.8rem;
+}
 p {
   font-size: 1.6rem;
 }
 button {
-  background-color: #c5c1c0;
-  border: 1px solid #0a1612;
+  background-color: #e9e9e9;
+  border: 4px solid #88bbd6;
   padding: 10px 30px;
-}
-html {
-  font-size: 67.5%;
 }
 .container {
   max-width: 880px;
   margin: 0 auto;
-  background-color: #1a2930;
+  background-color: #e9e9e9;
 }
-header {
+.container header {
+  padding: 15px 30px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-header nav {
+.container header nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 30%;
+  justify-content: space-around;
+  width: 40%;
 }
-header a {
+.container header a {
   font-size: 1.6em;
-  color: #c5c1c0;
+  color: #88bbd6;
   text-decoration: none;
 }
-header a:hover {
+.container header a:hover {
   text-decoration: underline;
-  color: #f7ce3e;
+  color: #99d3df;
 }
-.jumbo {
+.container .jumbo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #f7ce3e;
+  background-color: #99d3df;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   height: 80vh;
+  min-height: 550px;
+  padding: 30px;
 }
-.jumbo img {
+.container .jumbo h1 {
+  padding-bottom: 15px;
+}
+.container .jumbo h2 {
+  padding-bottom: 30px;
+}
+.container .jumbo img {
   width: 80%;
-  margin-bottom: 1vh;
+  padding-bottom: 30px;
   border-radius: 10px;
 }
-.content {
+.container .jumbo button {
+  background-color: ;
+}
+.container .content {
+  padding: 0 30px 30px 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  color: #c5c1c0;
 }
-footer {
+.container .content h3 {
+  padding-bottom: 15px;
+  text-decoration: underline;
+}
+.container .content table {
+  border-spacing: 10px;
+  border: 2px solid #88bbd6;
+}
+.container .content table tr {
+  border-bottom: 2px solid #88bbd6;
+}
+.container .content table th {
+  border-bottom: 3px solid #88bbd6;
+  padding: 5px;
+}
+.container .content table td {
+  padding: 5px;
+  text-align: center;
+}
+.container footer {
   text-align: center;
 }
 .flex-row {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
 }
@@ -213,4 +255,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.left-of-col {
+  align-self: flex-start;
 }
