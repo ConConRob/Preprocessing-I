@@ -137,16 +137,17 @@ body {
 html {
   font-size: 67.5%;
   color: #635c5c;
+  font-family: 'Cabin', sans-serif;
 }
 p {
   color: #635c5c;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 h3,
@@ -156,9 +157,22 @@ h6 {
   font-size: 1.8rem;
   text-align: left;
 }
+@media (max-width: 600px) {
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 2rem;
+  }
+}
 p {
   font-size: 1.6rem;
   text-align: left;
+}
+@media (max-width: 600px) {
+  p {
+    font-size: 1.8rem;
+  }
 }
 button {
   background-color: #e9e9e9;
@@ -168,7 +182,8 @@ button {
 }
 .container {
   max-width: 880px;
-  margin: 0 auto;
+  min-height: 100vh;
+  margin: auto;
   background-color: #e9e9e9;
 }
 .container header {
@@ -183,7 +198,7 @@ button {
   justify-content: space-around;
   width: 40%;
 }
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .container header nav {
     width: 100%;
   }
@@ -210,6 +225,12 @@ button {
   .container .jumbo {
     height: 475px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .jumbo p {
+    padding-bottom: 30px;
   }
 }
 .container .jumbo h1 {
@@ -222,6 +243,11 @@ button {
   width: 80%;
   margin-bottom: 30px;
   border-radius: 10px;
+}
+@media (max-width: 640px) {
+  .container .jumbo img {
+    display: none;
+  }
 }
 .container .content {
   padding: 0 30px 30px 30px;
@@ -245,6 +271,11 @@ button {
   border-spacing: 10px;
   border: 2px solid #88bbd6;
   font-size: 1.6rem;
+}
+@media (max-width: 600px) {
+  .container .content table {
+    font-size: 1.8rem;
+  }
 }
 .container .content table tr {
   border-bottom: 2px solid #88bbd6;

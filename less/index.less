@@ -70,6 +70,8 @@ html, body {
 	@padding-large:30px;
 	@padding-medium: 15px;
 	@padding-small: 5px;
+	//fonts
+	@fonts:'Cabin', sans-serif;  
 //mixins
 .flex(@direction, @just-content){
 	display: flex;
@@ -84,19 +86,26 @@ html, body {
 html{
 	font-size: @font-percentage;
 	color: @text-color;
+	font-family: @fonts;
 }
 p{color: @text-color;}
 h1{
-	.text(5rem, center)
+	.text(4rem, center)
 }
 h2{
-	.text(3rem, center)
+	.text(2.5rem, center)
 }
 h3, h4, h5, h6 {
-	.text(1.8rem, left)
+	.text(1.8rem, left);
+	@media (max-width:600px){
+		font-size: 2rem;
+	}
 }
 p{
 	.text(1.6rem, left);
+	@media (max-width:600px){
+		font-size: 1.8rem;
+	}
 }
 button{
 	background-color: @secondary-light;
@@ -107,7 +116,8 @@ button{
 
 .container {
 	max-width: 880px;
-	margin: 0 auto;
+	min-height: 100vh;
+	margin:  auto;
 	background-color: @secondary-light;
 	
 	header {
@@ -116,7 +126,7 @@ button{
 		nav{
 			.flex(row, space-around);
 			width: 40%;
-			@media (max-width:640px){
+			@media (max-width:800px){
 				width: 100%;
 			}
 		}
@@ -137,9 +147,13 @@ button{
 		clip-path:polygon(0 0, 100% 0, 100% 100%, 0 80%);
 		height: 600px;
 		padding: 15% @padding-large @padding-large @padding-large;
-		@media (max-width:640px){
+		@media (max-width: 640px){
 			height: 475px;
 			clip-path:polygon(0 0, 100% 0, 100% 100%, 0 90%);
+			.flex(column, center);
+			p{
+				padding-bottom: @padding-large;
+			}
 		}
 		h1{
 			padding-bottom: @padding-medium;
@@ -151,6 +165,9 @@ button{
 			width: 80%;
 			margin-bottom: @padding-large;
 			border-radius: 10px;
+			@media (max-width:640px){
+				display: none;
+			}
 		}
 	}
 
@@ -171,6 +188,9 @@ button{
 			border-spacing: 10px;
 			border: 2px solid @secondary-dark;
 			font-size: 1.6rem;
+			@media (max-width:600px){
+				font-size: 1.8rem;
+			}
 			tr{
 				border-bottom: 2px solid @secondary-dark;
 			}
