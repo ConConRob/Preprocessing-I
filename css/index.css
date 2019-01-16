@@ -198,6 +198,9 @@ header a:hover {
   flex-wrap: wrap;
   color: #c5c1c0;
 }
+footer {
+  text-align: center;
+}
 .flex-row {
   display: flex;
   flex-direction: row;
