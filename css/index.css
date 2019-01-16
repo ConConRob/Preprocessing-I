@@ -140,6 +140,7 @@ html {
 .container {
   max-width: 880px;
   margin: 0 auto;
+  background-color: #c5c1c0;
 }
 header {
   display: flex;
@@ -154,8 +155,26 @@ header nav {
 }
 header a {
   font-size: 1.6em;
+  color: #1a2930;
   text-decoration: none;
 }
 header a:hover {
   text-decoration: underline;
+  color: #f7ce3e;
+}
+.jumbo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f7ce3e;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60vh);
+  height: 80vh;
+}
+.jumbo img {
+  width: 40%;
+}
+div.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
