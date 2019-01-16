@@ -194,8 +194,15 @@ header a:hover {
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   color: #c5c1c0;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 .column-1-2 {
   width: 50%;
