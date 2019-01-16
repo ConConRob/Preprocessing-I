@@ -96,7 +96,7 @@ html{
 .container {
 	max-width: 880px;
 	margin: 0 auto;
-	background-color: @primary-color;
+	background-color: @tertiary-color;
 }
 
 header {
@@ -107,7 +107,7 @@ header {
 	}
 	a{
 		font-size: 1.6em;
-		color:@tertiary-color;
+		color:@primary-color;
 		text-decoration: none;
 		&:hover{
 			text-decoration: underline;
@@ -126,6 +126,11 @@ header {
 		margin-bottom:  1vh;
 		border-radius: 10px;
 	}
+}
+
+.content {
+	.flex(row,space-between);
+	color: @primary-color;
 }
 
 .column-1-2 {

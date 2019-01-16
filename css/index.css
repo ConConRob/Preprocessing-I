@@ -156,7 +156,7 @@ html {
 .container {
   max-width: 880px;
   margin: 0 auto;
-  background-color: #c5c1c0;
+  background-color: #1a2930;
 }
 header {
   display: flex;
@@ -171,7 +171,7 @@ header nav {
 }
 header a {
   font-size: 1.6em;
-  color: #1a2930;
+  color: #c5c1c0;
   text-decoration: none;
 }
 header a:hover {
@@ -190,6 +190,12 @@ header a:hover {
   width: 80%;
   margin-bottom: 1vh;
   border-radius: 10px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #c5c1c0;
 }
 .column-1-2 {
   width: 50%;
