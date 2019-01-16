@@ -56,4 +56,46 @@ table {
 html, body {
     height: 100%;
 }
+// ==========================END OF RESET===============================
+//variables
+//colors
+@primary-color: #c5c1c0;
+@secondary-color:#0a1612;
+@tertiary-color: #1a2930;
+@quaternary-color: #f7ce3e;
+
+//mixins
+.flex(@direction, @just-content){
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @just-content;
+}
+
+//less
+
+
+
+
+html{
+	font-size: 67.5%;
+}
+.container {
+	max-width: 880px;
+	margin: 0 auto;
+}
+
+header {
+	.flex(row, flex-end);
+	nav{
+		.flex(row, space-between);
+		width: 30%;
+	}
+	a{
+		font-size: 1.6em;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
 
